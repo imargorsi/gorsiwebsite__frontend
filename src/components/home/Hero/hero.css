@@ -1,0 +1,133 @@
+.heroimg {
+  background-image: url("/hero.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.heading {
+  padding-top: 23rem;
+  color: white;
+}
+
+.imgelement {
+  padding-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.div-1 {
+  background-image: url("/2150754861.jpg");
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  border: 4px solid var(--clr-dark-2);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s linear;
+  margin-bottom: 5rem;
+}
+
+.div-1:hover {
+  box-shadow: 10px 10px 25px 4px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 10px 10px 25px 4px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 10px 10px 25px 4px rgba(0, 0, 0, 0.57);
+  border: 2px solid whitesmoke;
+}
+
+.div-1:hover::after {
+  content: "History";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-dark-2);
+  padding: 10px 30px;
+  border-radius: 5px;
+
+  color: whitesmoke;
+  font-size: 1.4rem;
+  border: 1px solid whitesmoke;
+}
+
+.book {
+  background-image: url("/book.jpg");
+}
+
+.book:hover::after {
+  content: "Books";
+}
+
+.people {
+  background-image: url(" /people.jpg");
+}
+
+.people:hover::after {
+  content: "People";
+}
+
+.writing {
+  background-image: url("/writing.jpg");
+}
+
+.writing:hover::after {
+  content: "Blogs";
+}
+
+/* for xl   */
+/* @media (max-width: 1280px) {} */
+
+/* for large */
+/* @media (max-width: 1024px) {} */
+
+/* for medium */
+@media (max-width: 768px) {
+  .hero__heading {
+    padding-top: 20rem;
+    font-size: 2.2rem;
+    padding-left: 0;
+  }
+
+  .imgelement {
+    padding-top: 1rem;
+    gap: 1rem;
+    padding-left: 0;
+  }
+}
+
+/* for small */
+@media (max-width: 640px) {
+  .hero__heading {
+    font-size: 1.8rem;
+    padding-top: 22rem;
+  }
+
+  .div-1 {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* for extra small */
+@media (max-width: 475px) {
+  .hero__heading {
+    font-size: 1rem;
+    padding-top: 5rem;
+  }
+
+  .div-1 {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0rem;
+  }
+
+  .imgelement {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+  .writing {
+    display: none;
+  }
+}

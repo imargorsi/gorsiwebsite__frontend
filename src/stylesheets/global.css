@@ -1,0 +1,44 @@
+:root {
+  --clr-light: #ffe9c5;
+  --clr-dark-1: #8a671f;
+  --clr-dark-2: #271d1b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+html {
+  scroll-behavior: smooth;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Newsreader", serif;
+  background-color: var(--clr-light);
+}

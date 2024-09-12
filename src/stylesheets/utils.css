@@ -1,0 +1,151 @@
+/* for 2xl   */
+/* @media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+} */
+
+/* for xl   */
+/* @media (max-width: 1280px) {
+   .container {
+    max-width: 1024px;
+  }
+} */
+
+/* for large */
+/* @media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+} */
+
+/* for medium */
+/* @media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+} */
+
+/* for small */
+/* @media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+} */
+
+/* for extra small */
+/* @media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+} */
+
+.container {
+  max-width: 1536px;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+
+.heading__h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.heading__h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.heading__h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.paragraph {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.3rem;
+  background-color: var(--clr-dark-1);
+  color: white;
+  padding-inline: 3rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-radius: 6px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 10px rgb(88, 87, 84), 0 4px 10px rgb(80, 80, 79),
+    0 0 100px -10px var(--clr-dark-1);
+}
+
+.fullbackground {
+  width: 100%;
+}
+
+/* for 2xl  */
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+  .heading__h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* for xl   */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+  .heading__h1 {
+    font-size: 3rem;
+  }
+}
+
+/* for large */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+  .heading__h1 {
+    font-size: 2.3rem;
+  }
+}
+
+/* for medium */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+  .heading__h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* for small */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+  .heading__h1 {
+    font-size: 2rem;
+  }
+}
+
+/* for extra small */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
+  .heading__h1 {
+    font-size: 1.6rem;
+  }
+}

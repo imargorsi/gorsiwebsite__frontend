@@ -1,0 +1,121 @@
+.fullbackground {
+  background-color: var(--clr-dark-2);
+}
+
+.header__element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+
+.header__links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 2rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+.header__links > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.header__burgerbtn {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* for large */
+@media (max-width: 1024px) {
+  .header__links {
+    display: none;
+  }
+
+  .header__logo {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .header__burgerbtn {
+    display: inline-block;
+    width: 3rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    color: whitesmoke;
+  }
+
+  .mobile-nav {
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: auto;
+    background-color: var(--clr-dark-2);
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .profiletopbtn > button {
+    font-size: 0.8rem;
+  }
+
+  .mobile-nav > * {
+    color: var(--clr-light);
+    font-size: 1.5rem;
+  }
+}
+
+/* for medium */
+/* @media (max-width: 768px) {} */
+
+/* for small */
+/* @media (max-width: 640px) {} */
+
+/* for extra small */
+@media (max-width: 470px) {
+  .header__element {
+    padding: 0.3rem;
+  }
+
+  .header__logo {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .header__burgerbtn {
+    padding-top: 0.4rem;
+    display: inline-block;
+    width: 3rem;
+  }
+
+  .mobile-nav {
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: auto;
+    background-color: var(--clr-dark-2);
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-nav > * {
+    color: var(--clr-light);
+    font-size: 1.5rem;
+  }
+}

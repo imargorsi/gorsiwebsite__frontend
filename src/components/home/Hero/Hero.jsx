@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div className="fullbackground heroimg">
       <div className="container ">
-        <h2 className="heading__h1 heading">
+        <h2 className="heading__h1 hero__heading">
           Discover the Legacy of the Gorsi Tribe Unveiling Our Rich History and
           Traditions
         </h2>

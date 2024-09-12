@@ -4,7 +4,7 @@
   background-size: cover;
 }
 
-.heading {
+.hero__heading {
   padding-top: 23rem;
   color: white;
 }
@@ -84,12 +84,6 @@
 
 /* for medium */
 @media (max-width: 768px) {
-  .hero__heading {
-    padding-top: 20rem;
-    font-size: 2.2rem;
-    padding-left: 0;
-  }
-
   .imgelement {
     padding-top: 1rem;
     gap: 1rem;
@@ -99,24 +93,18 @@
 
 /* for small */
 @media (max-width: 640px) {
-  .hero__heading {
-    font-size: 1.8rem;
-    padding-top: 22rem;
-  }
-
   .div-1 {
     width: 200px;
     height: 200px;
+  }
+
+  .hero__heading {
+    padding-top: 6rem;
   }
 }
 
 /* for extra small */
 @media (max-width: 475px) {
-  .hero__heading {
-    font-size: 1rem;
-    padding-top: 5rem;
-  }
-
   .div-1 {
     width: 200px;
     height: 200px;

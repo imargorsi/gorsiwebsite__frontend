@@ -1,0 +1,74 @@
+.banner__wrapper {
+  position: relative;
+  background-image: url("/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 10rem;
+  height: 100%;
+}
+
+.banner__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(39, 29, 27, 0.7);
+  z-index: 1;
+}
+
+.banner__heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 200px;
+  position: relative;
+  z-index: 2;
+}
+
+.banner__heading > h3 {
+  color: var(--clr-white);
+}
+
+/* for 2xl   */
+/* @media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+} */
+
+/* for xl   */
+/* @media (max-width: 1280px) {
+   .container {
+    max-width: 1024px;
+  }
+} */
+
+/* for large */
+/* @media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+} */
+
+/* for medium */
+/* @media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+} */
+
+/* for small */
+@media (max-width: 640px) {
+  .banner__heading {
+    height: 140px;
+  }
+}
+
+/* for extra small */
+/* @media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+} */

@@ -1,3 +1,14 @@
+@keyframes fade-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .fullbackground {
   background-color: var(--clr-dark-2);
 }
@@ -32,49 +43,30 @@
   display: none;
 }
 
-.mobile-nav {
+.header__profile {
+  cursor: pointer;
+}
+
+.header__profile__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid var(--clr-dark-1);
+}
+
+.mobile_nav {
   display: none;
+}
+
+.desktop__nav {
+  display: block;
 }
 
 /* for large */
 @media (max-width: 1024px) {
-  .header__links {
-    display: none;
-  }
-
   .header__logo {
     font-size: 2rem;
     font-weight: 500;
-  }
-
-  .header__burgerbtn {
-    display: inline-block;
-    width: 3rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    color: whitesmoke;
-  }
-
-  .mobile-nav {
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-    margin-left: auto;
-    background-color: var(--clr-dark-2);
-    overflow: hidden;
-    padding: 2rem;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .profiletopbtn > button {
-    font-size: 0.8rem;
-  }
-
-  .mobile-nav > * {
-    color: var(--clr-light);
-    font-size: 1.5rem;
   }
 }
 
@@ -82,12 +74,52 @@
 /* @media (max-width: 768px) {} */
 
 /* for small */
-/* @media (max-width: 640px) {} */
+@media (max-width: 640px) {
+  .desktop__nav {
+    display: none;
+  }
+
+  .mobile_nav {
+    display: block;
+  }
+
+  .header__burgerbtn {
+    display: inline-block;
+    width: 3rem;
+    margin-top: 0.2rem;
+    cursor: pointer;
+    color: whitesmoke;
+  }
+
+  .mobile-nav {
+    width: 40%;
+    position: absolute;
+    top: 5rem;
+    right: 0.4rem;
+    display: block;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: var(--clr-dark-2);
+    padding: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: fade-in-top 0.3s linear 0s 1 normal none;
+  }
+
+  .profiletopbtn > button {
+    font-size: 0.8rem;
+  }
+}
 
 /* for extra small */
 @media (max-width: 470px) {
   .header__element {
     padding: 0.3rem;
+  }
+
+  .header__links {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   .header__logo {
@@ -99,23 +131,5 @@
     padding-top: 0.4rem;
     display: inline-block;
     width: 3rem;
-  }
-
-  .mobile-nav {
-    width: 250px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-    margin-left: auto;
-    background-color: var(--clr-dark-2);
-    overflow: hidden;
-    padding: 2rem;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .mobile-nav > * {
-    color: var(--clr-light);
-    font-size: 1.5rem;
   }
 }

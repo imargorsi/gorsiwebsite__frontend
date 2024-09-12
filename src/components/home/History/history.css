@@ -1,7 +1,8 @@
 .history__section {
-  padding: 6rem 0rem;
   display: flex;
   gap: 4rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
 }
 
 .history__section_1,
@@ -104,11 +105,12 @@
 }
 
 /* for small */
-/* @media (max-width: 640px) {
-  .container {
-    max-width: 475px;
+@media (max-width: 640px) {
+  .history__section {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
   }
-} */
+}
 
 /* for extra small */
 /* @media (max-width: 400px) {

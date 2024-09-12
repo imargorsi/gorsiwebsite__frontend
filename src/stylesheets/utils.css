@@ -61,6 +61,11 @@
   font-weight: 500;
 }
 
+.heading__h4 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
 .paragraph {
   font-size: 1.3rem;
 }
@@ -96,6 +101,10 @@
   .heading__h1 {
     font-size: 3.5rem;
   }
+
+  .heading__h4 {
+    font-size: 1.5rem;
+  }
 }
 
 /* for xl   */
@@ -105,6 +114,10 @@
   }
   .heading__h1 {
     font-size: 3rem;
+  }
+
+  .heading__h2 {
+    font-size: 2.3rem;
   }
 
   .paragraph {
@@ -121,8 +134,16 @@
     font-size: 2.3rem;
   }
 
+  .heading__h2 {
+    font-size: 1.8rem;
+  }
+
   .heading__h3 {
     font-size: 1.4rem;
+  }
+
+  .heading__h4 {
+    font-size: 1.2rem;
   }
 }
 
@@ -155,5 +176,9 @@
 
   .heading__h1 {
     font-size: 1.6rem;
+  }
+
+  .heading__h2 {
+    font-size: 1.4rem;
   }
 }

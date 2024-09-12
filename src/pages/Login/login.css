@@ -1,0 +1,160 @@
+.login__background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  padding: 4rem 0rem;
+}
+
+.login__sideimg {
+  border: 2px solid var(--clr-white);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+
+.login__sideimg,
+.login__form {
+  width: 50%;
+}
+.loginpage__wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__switcher {
+  width: 376px;
+  height: 66.82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 33px;
+  background-color: var(--clr-light);
+}
+
+.switcherbtn {
+  width: 150px;
+  height: 45px;
+  border-radius: 33px;
+  font-size: 1.2rem;
+}
+
+.switcherbtn__active {
+  background-color: var(--clr-dark-1);
+  color: var(--clr-white);
+  transition: all 0.5s linear;
+}
+
+/* form css */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 4rem;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.form-label {
+  color: var(--clr-white);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #6f6f6f;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password {
+  text-align: right;
+  cursor: pointer;
+  color: var(--clr-white);
+}
+
+.loginbtn {
+  width: 200px;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+/* end form css */
+
+/* for 2xl   */
+/* @media (max-width: 1536px) {
+  
+} */
+
+/* for xl   */
+@media (max-width: 1280px) {
+  .form-container {
+    padding-inline: 2rem;
+  }
+}
+
+/* for large */
+@media (max-width: 1024px) {
+  .login__sideimg {
+    height: 700px;
+  }
+}
+
+/* for medium */
+@media (max-width: 768px) {
+  .loginpage__wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .login__sideimg,
+  .login__form {
+    width: 100%;
+  }
+}
+
+/* for small */
+@media (max-width: 640px) {
+  .login__sideimg {
+    height: 500px;
+  }
+}
+
+/* for extra small */
+@media (max-width: 400px) {
+  .login__switcher {
+    width: 100%;
+  }
+
+  .login__sideimg {
+    height: 300px;
+  }
+
+  .form-container {
+    padding-inline: 0rem;
+  }
+
+  .switcherbtn {
+    width: 120px;
+  }
+
+  .loginbtn {
+    margin-top: 1rem;
+  }
+}

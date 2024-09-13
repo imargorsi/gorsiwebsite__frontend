@@ -1,5 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 function LoginForm() {
   const validationSchema = Yup.object({
@@ -11,8 +13,33 @@ function LoginForm() {
       .required("Password is required"),
   });
 
+  const handleLogin = async (body) => {
+    try {
+      const loginUser = await axios.post(
+        "http://localhost:3000/api/login",
+        body
+      );
+
+      if (loginUser.data.message === "Log in Successfully") {
+        toast.success("Login Successfull");
+      }
+    } catch (error) {
+      console.error("error during login", error);
+
+      if (
+        error.status === 401 &&
+        error.response.data.message === "Invalid email or password"
+      ) {
+        toast.error("Invalid Email or Password");
+      } else {
+        toast.error("Something Went Wrong, try again");
+      }
+    }
+  };
+
   return (
     <div className="form-container ">
+      <Toaster position="top-right" reverseOrder={false} />
       <Formik
         initialValues={{
           email: "",
@@ -20,7 +47,7 @@ function LoginForm() {
         }}
         validationSchema={validationSchema}
         onSubmit={(values) => {
-          console.log(values);
+          handleLogin(values);
         }}
       >
         {({ errors, touched }) => (

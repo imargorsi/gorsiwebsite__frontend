@@ -1,6 +1,8 @@
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 function SignUpForm() {
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -18,8 +20,33 @@ function SignUpForm() {
       .required("Confirm Password is required"),
   });
 
+  const handleSignUp = async (body) => {
+    try {
+      const signup = await axios.post(
+        "http://localhost:3000/api/register",
+        body
+      );
+
+      if (signup.data.message === "New User Created") {
+        toast.success("User Registeration Successfull, please login");
+      }
+    } catch (error) {
+      console.log("error during signup", error);
+
+      if (
+        error.response.data.message === "User with this email already exists" &&
+        error.status === 409
+      ) {
+        toast.error("User with this email already exists");
+      } else {
+        toast.error("Something Went Wrong, try again");
+      }
+    }
+  };
+
   return (
     <div className="form-container">
+      <Toaster position="top-right" reverseOrder={false} />
       <Formik
         initialValues={{
           email: "",
@@ -29,7 +56,7 @@ function SignUpForm() {
         }}
         validationSchema={validationSchema}
         onSubmit={(values) => {
-          console.log(values);
+          handleSignUp(values);
         }}
       >
         {({ errors, touched }) => (

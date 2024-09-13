@@ -3,6 +3,7 @@ import * as Yup from "yup";
 
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+
 function SignUpForm() {
   const validationSchema = Yup.object({
     email: Yup.string()

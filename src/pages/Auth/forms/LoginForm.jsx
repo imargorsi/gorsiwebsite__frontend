@@ -3,7 +3,12 @@ import * as Yup from "yup";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
+import { useUserInfo } from "../../../../context/UserContext";
+import { useEffect } from "react";
+
 function LoginForm() {
+  const { userInfo, setUserInfo } = useUserInfo();
+
   const validationSchema = Yup.object({
     email: Yup.string()
       .email("Invalid email format")
@@ -11,6 +16,10 @@ function LoginForm() {
     password: Yup.string()
       .min(6, "Password must be at least 6 characters")
       .required("Password is required"),
+  });
+
+  useEffect(() => {
+    console.log(userInfo, "i am context data");
   });
 
   const handleLogin = async (body) => {
@@ -22,6 +31,7 @@ function LoginForm() {
 
       if (loginUser.data.message === "Log in Successfully") {
         toast.success("Login Successfull");
+        setUserInfo(loginUser.data.data);
       }
     } catch (error) {
       console.error("error during login", error);

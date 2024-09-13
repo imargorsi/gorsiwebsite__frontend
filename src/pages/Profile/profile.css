@@ -1,15 +1,16 @@
+.profilebackground {
+  background: linear-gradient(to right, var(--clr-light) 75%, #9e896a 10%);
+}
+
 .profile__wrapper {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   background-color: var(--clr-light);
-  border: 2px solid red;
 }
 
 .userprofile {
   width: 75%;
-  padding-inline: 10rem;
   padding-top: 4rem;
-
   display: flex;
   flex-direction: column;
   gap: 10rem;
@@ -26,6 +27,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  position: relative;
 }
 
 .profile__info__summary {
@@ -44,7 +46,7 @@
 }
 
 .gorsitrademarklogo {
-  width: 100%;
+  width: 250px;
   height: 250px;
   opacity: 0.3;
   background-image: url("/trademarkgorsi.png");
@@ -53,25 +55,42 @@
 }
 
 /* for 2xl   */
-/* @media (max-width: 1536px) {
-  .container {
-    max-width: 1280px;
+@media (max-width: 1536px) {
+  .userprofile {
+    width: 70%;
   }
-} */
+}
 
 /* for xl   */
-/* @media (max-width: 1280px) {
-   .container {
-    max-width: 1024px;
+@media (max-width: 1280px) {
+  .profileimg {
+    width: 200px;
+    height: 200px;
   }
-} */
+
+  .gorsitrademarklogo {
+    width: 200px;
+    height: 200px;
+  }
+}
 
 /* for large */
-/* @media (max-width: 1024px) {
-  .container {
-    max-width: 768px;
+@media (max-width: 1024px) {
+  .profile__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
-} */
+
+  .profilebackground {
+    background: var(--clr-light);
+  }
+
+  .userprofile {
+    width: 100%;
+    gap: 4rem;
+  }
+}
 
 /* for medium */
 /* @media (max-width: 768px) {
@@ -81,15 +100,36 @@
 } */
 
 /* for small */
-/* @media (max-width: 640px) {
-  .container {
-    max-width: 475px;
+@media (max-width: 640px) {
+  .profileimg {
+    width: 180px;
+    height: 180px;
   }
-} */
+
+  .gorsitrademarklogo {
+    position: absolute;
+    top: 9rem;
+    right: 2rem;
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile__info {
+    gap: 1rem;
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
 
 /* for extra small */
-/* @media (max-width: 400px) {
-  .container {
-    width: 100%;
+@media (max-width: 400px) {
+  .gallery__images {
+    flex-direction: column;
+    align-items: flex-start;
   }
-} */
+
+  .gorsitrademarklogo {
+    right: 0rem;
+  }
+}

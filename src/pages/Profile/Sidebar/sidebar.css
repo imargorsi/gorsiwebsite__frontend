@@ -48,3 +48,59 @@
   gap: 0.5rem;
   margin-top: 1rem;
 }
+
+/* for 2xl   */
+@media (max-width: 1536px) {
+  .copytoclipboared {
+    margin-top: 1rem;
+  }
+
+  .sidebar {
+    width: 30%;
+    padding-inline: 1rem;
+    padding-top: 2rem;
+  }
+
+  .sidebar__heading {
+    font-size: 2rem;
+  }
+}
+
+/* for xl   */
+@media (max-width: 1280px) {
+  .sidebar {
+    width: 100%;
+    padding-inline: 1rem;
+    padding-top: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+}
+
+/* for large */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* for medium */
+/* @media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+} */
+
+/* for small */
+/* @media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+} */
+
+/* for extra small */
+/* @media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+} */

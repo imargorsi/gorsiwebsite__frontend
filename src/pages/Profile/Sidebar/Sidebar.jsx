@@ -18,7 +18,7 @@ function Sidebar() {
         <p className="paragraph userinfo">Contact: 0309 4713379</p>
       </div>
       <div className="socialmedilinks">
-        <h3 className="heading__h3">Social Media Profiles:</h3>
+        <h3 className="heading__h3 ">Social Media Profiles:</h3>
         <div className="socialmedilinks__icons">
           <FacebookIcon width={"5rem"} style={{ cursor: "pointer" }} />
           <InstagramIcon width={"5rem"} style={{ cursor: "pointer" }} />

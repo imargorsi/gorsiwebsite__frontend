@@ -1,17 +1,14 @@
-import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./login.css";
 
-import AuthForm from "./forms/AuthForm";
-import { Link, useParams } from "react-router-dom";
+import LoginForm from "./forms/LoginForm";
+import { Link } from "react-router-dom";
+import SignUpForm from "./forms/SignUpForm";
 
 function Login() {
-  const [isLogin, setIsLogin] = useState(true);
+  const location = useLocation();
 
-  const handleLoginToggle = () => {
-    setIsLogin((prevLogin) => !prevLogin);
-  };
-
-  const { state } = useParams();
+  const isLogin = location.pathname === "/auth/login";
 
   return (
     <div className="fullbackground login__background">
@@ -27,7 +24,6 @@ function Login() {
                   className={
                     isLogin ? "switcherbtn switcherbtn__active" : "switcherbtn"
                   }
-                  onClick={handleLoginToggle}
                 >
                   Login
                 </button>
@@ -38,13 +34,12 @@ function Login() {
                   className={
                     !isLogin ? "switcherbtn switcherbtn__active" : "switcherbtn"
                   }
-                  onClick={handleLoginToggle}
                 >
                   Register
                 </button>
               </Link>
             </div>
-            <AuthForm isLogin={isLogin} />
+            {isLogin ? <LoginForm /> : <SignUpForm />}
           </div>
         </div>
       </div>

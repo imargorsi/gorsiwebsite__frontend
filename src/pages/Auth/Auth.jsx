@@ -5,7 +5,7 @@ import LoginForm from "./forms/LoginForm";
 import { Link } from "react-router-dom";
 import SignUpForm from "./forms/SignUpForm";
 
-function Login() {
+function Auth() {
   const location = useLocation();
 
   const isLogin = location.pathname === "/auth/login";
@@ -47,4 +47,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Auth;

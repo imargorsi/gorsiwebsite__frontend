@@ -104,6 +104,11 @@
   width: 100%;
 }
 
+.clipboardicon {
+  width: 1.6rem;
+  color: blue;
+}
+
 /* for 2xl  */
 @media (max-width: 1536px) {
   .container {

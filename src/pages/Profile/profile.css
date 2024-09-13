@@ -1,0 +1,95 @@
+.profile__wrapper {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--clr-light);
+  border: 2px solid red;
+}
+
+.userprofile {
+  width: 75%;
+  padding-inline: 10rem;
+  padding-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.profileimg {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  border: 4px solid var(--clr-dark-2);
+}
+
+.profile__info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile__info__summary {
+  margin-top: 1rem;
+}
+
+.userprofile__gallery {
+  margin-bottom: 4rem;
+}
+
+.gallery__images {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gorsitrademarklogo {
+  width: 100%;
+  height: 250px;
+  opacity: 0.3;
+  background-image: url("/trademarkgorsi.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* for 2xl   */
+/* @media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+} */
+
+/* for xl   */
+/* @media (max-width: 1280px) {
+   .container {
+    max-width: 1024px;
+  }
+} */
+
+/* for large */
+/* @media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+} */
+
+/* for medium */
+/* @media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+} */
+
+/* for small */
+/* @media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+} */
+
+/* for extra small */
+/* @media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+} */

@@ -1,0 +1,50 @@
+/* sidebar css */
+
+.sidebar {
+  width: 25%;
+  background-color: #9e896a;
+  padding: 2rem;
+}
+
+.sidebar__heading {
+  color: var(--clr-white);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.copytoclipboared {
+  padding: 0.5rem;
+  background-color: #d9d9d9;
+  color: var(--clr-dark-2);
+  border-radius: 8px;
+  margin-top: 2rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar__userinfo {
+  margin-top: 4rem;
+}
+
+.userinfo {
+  color: var(--clr-white);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.socialmedilinks {
+  margin-top: 4rem;
+}
+
+.socialmedilinks > h3 {
+  color: var(--clr-white);
+}
+
+.socialmedilinks__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}

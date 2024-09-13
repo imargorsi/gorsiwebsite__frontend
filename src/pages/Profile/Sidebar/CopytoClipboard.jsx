@@ -1,8 +1,10 @@
 import { useRef } from "react";
 import ClipboardIcon from "../../../Icons/Clipboared.icon";
 import toast, { Toaster } from "react-hot-toast";
+import { useParams } from "react-router";
 
 const CopyToClipboardComponent = () => {
+  const { id } = useParams();
   const paragraphRef = useRef(null);
 
   const copyToClipboard = async () => {
@@ -22,11 +24,11 @@ const CopyToClipboardComponent = () => {
     <div className="copytoclipboared">
       <Toaster position="top-center" reverseOrder={false} />
       <p
-        className="paragraph"
+        className="profilelink__id"
         ref={paragraphRef}
         style={{ userSelect: "text" }}
       >
-        www.gorsi.online/profile/2
+        {`www.gorsi.online/profile/${id}`}
       </p>
       <ClipboardIcon onClick={copyToClipboard} style={{ cursor: "pointer" }} />
     </div>

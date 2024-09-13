@@ -5,11 +5,20 @@ import FacebookIcon from "../../../Icons/Facebook.icon";
 import InstagramIcon from "../../../Icons/Instagram.icon";
 import TwitterIcon from "../../../Icons/Twitter.icon";
 
+import { useUserInfo } from "../../../../context/UserContext";
+
 function Sidebar() {
+  const { userInfo, setUserInfo } = useUserInfo();
+  const handleLogOut = () => {
+    setUserInfo(null);
+  };
+
   return (
     <div className="sidebar">
       <h2 className="sidebar__heading">About Me</h2>
+
       <CopyToClipboardComponent />
+
       <div className="sidebar__userinfo">
         <p className="paragraph userinfo">City: Lahore</p>
         <p className="paragraph userinfo">Membership ID#: 0001</p>
@@ -25,6 +34,11 @@ function Sidebar() {
           <TwitterIcon width={"5rem"} style={{ cursor: "pointer" }} />
         </div>
       </div>
+      {userInfo && (
+        <button className="btn logoutbtn" onClick={handleLogOut}>
+          Log Out
+        </button>
+      )}
     </div>
   );
 }

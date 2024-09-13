@@ -3,10 +3,13 @@ import * as Yup from "yup";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
+import { useNavigate } from "react-router-dom";
+
 import { useUserInfo } from "../../../../context/UserContext";
 import { useEffect } from "react";
 
 function LoginForm() {
+  const navigate = useNavigate();
   const { userInfo, setUserInfo } = useUserInfo();
 
   const validationSchema = Yup.object({
@@ -32,6 +35,7 @@ function LoginForm() {
       if (loginUser.data.message === "Log in Successfully") {
         toast.success("Login Successfull");
         setUserInfo(loginUser.data.data);
+        navigate("/");
       }
     } catch (error) {
       console.error("error during login", error);

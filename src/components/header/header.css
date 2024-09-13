@@ -67,6 +67,14 @@ Link {
   display: block;
 }
 
+.authbtn {
+  width: 90px;
+  height: 40px;
+  font-size: 1.1rem;
+  background-color: var(--clr-dark-1);
+  border-radius: 6px;
+}
+
 /* for large */
 @media (max-width: 1024px) {
   .header__logo {

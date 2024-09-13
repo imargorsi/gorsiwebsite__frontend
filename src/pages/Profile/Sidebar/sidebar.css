@@ -24,6 +24,10 @@
   justify-content: space-between;
 }
 
+.profilelink__id {
+  font-size: 1rem;
+}
+
 .sidebar__userinfo {
   margin-top: 4rem;
 }
@@ -46,6 +50,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.logoutbtn {
   margin-top: 1rem;
 }
 

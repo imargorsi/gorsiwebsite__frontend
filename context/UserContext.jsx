@@ -7,11 +7,10 @@ export const UserProvider = ({ children }) => {
 
   useEffect(() => {
     const storedUserInfo = localStorage.getItem("userInfo");
-
     if (storedUserInfo) {
       setUserInfo(JSON.parse(storedUserInfo));
     }
-  }, [userInfo]);
+  }, []);
 
   useEffect(() => {
     if (userInfo) {
@@ -31,7 +30,7 @@ export const UserProvider = ({ children }) => {
 export const useUserInfo = () => {
   const context = useContext(UserContext);
   if (!context) {
-    throw new Error("User Context must be used within a PostProvider");
+    throw new Error("UserContext must be used within a UserProvider");
   }
   return context;
 };

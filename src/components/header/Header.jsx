@@ -4,6 +4,7 @@ import HeaderLink from "./HeaderLink";
 
 import BurgerMenuIcon from "../../Icons/BurgerMenu.icon";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -17,7 +18,12 @@ function Header() {
       <header className="container">
         <div className="header__element">
           <h1 className="header__logo">
-            Gorsi Tribe<span className="header__dot">.</span>
+            <Link
+              to={"/"}
+              style={{ color: "whitesmoke", textDecoration: "none" }}
+            >
+              Gorsi Tribe<span className="header__dot">.</span>
+            </Link>
           </h1>
           <div className="desktop__nav">
             <HeaderLink />

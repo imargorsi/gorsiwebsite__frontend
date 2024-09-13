@@ -30,6 +30,11 @@
   font-size: 2rem;
   font-weight: 500;
   color: whitesmoke;
+  animation: focus-in-contract 1s linear 0s 1 normal none;
+}
+
+Link {
+  color: whitesmoke;
 }
 
 .header__links > a {

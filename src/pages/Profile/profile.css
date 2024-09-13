@@ -52,6 +52,7 @@
   background-image: url("/trademarkgorsi.png");
   background-size: cover;
   background-repeat: no-repeat;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* for 2xl   */

@@ -19,7 +19,7 @@
   color: var(--clr-dark-2);
   border-radius: 8px;
   margin-top: 2rem;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }

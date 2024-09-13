@@ -12,7 +12,7 @@ function LoginForm() {
   });
 
   return (
-    <div className="form-container">
+    <div className="form-container ">
       <Formik
         initialValues={{
           email: "",

@@ -16,6 +16,10 @@
   height: 800px;
 }
 
+.login__sideimg > img {
+  animation: float 3s ease-in-out infinite;
+}
+
 .login__sideimg,
 .login__form {
   width: 50%;
@@ -65,6 +69,7 @@
   padding-inline: 4rem;
   width: 100%;
   margin-top: 4rem;
+  animation: fade-in-bottom 0.5s linear 0s 1 normal none;
 }
 
 .form-label {

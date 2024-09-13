@@ -48,6 +48,7 @@
   height: 45px;
   border-radius: 33px;
   font-size: 1.2rem;
+  color: var(--clr-dark-2);
 }
 
 .switcherbtn__active {

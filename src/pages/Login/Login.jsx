@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./login.css";
 
 import AuthForm from "./forms/AuthForm";
+import { Link, useParams } from "react-router-dom";
 
 function Login() {
   const [isLogin, setIsLogin] = useState(true);
@@ -9,6 +10,8 @@ function Login() {
   const handleLoginToggle = () => {
     setIsLogin((prevLogin) => !prevLogin);
   };
+
+  const { state } = useParams();
 
   return (
     <div className="fullbackground login__background">
@@ -19,22 +22,27 @@ function Login() {
           </div>
           <div className="login__form">
             <div className="login__switcher">
-              <button
-                className={
-                  isLogin ? "switcherbtn switcherbtn__active" : "switcherbtn"
-                }
-                onClick={handleLoginToggle}
-              >
-                Login
-              </button>
-              <button
-                className={
-                  !isLogin ? "switcherbtn switcherbtn__active" : "switcherbtn"
-                }
-                onClick={handleLoginToggle}
-              >
-                Register
-              </button>
+              <Link to={"/auth/login"}>
+                <button
+                  className={
+                    isLogin ? "switcherbtn switcherbtn__active" : "switcherbtn"
+                  }
+                  onClick={handleLoginToggle}
+                >
+                  Login
+                </button>
+              </Link>
+
+              <Link to={"/auth/signup"}>
+                <button
+                  className={
+                    !isLogin ? "switcherbtn switcherbtn__active" : "switcherbtn"
+                  }
+                  onClick={handleLoginToggle}
+                >
+                  Register
+                </button>
+              </Link>
             </div>
             <AuthForm isLogin={isLogin} />
           </div>

@@ -7,6 +7,8 @@ import { useUserInfo } from "../../../../context/UserContext";
 
 import axios from "axios";
 import toast from "react-hot-toast";
+import FacebookIcon from "../../../Icons/Facebook.icon";
+import InstagramIcon from "../../../Icons/Instagram.icon";
 
 const countWords = (str) =>
   str ? str.split(/\s+/).filter((word) => word.length > 0).length : 0;
@@ -57,11 +59,6 @@ function EditUserForm({ setModalOpen }) {
     galleryimgTwo: Yup.mixed().nullable(),
   });
 
-  const handleFormSubmit = (values) => {
-    console.log("Form submitted with values:", values);
-    handleEditUser(values);
-  };
-
   return (
     <div>
       <Formik
@@ -73,12 +70,18 @@ function EditUserForm({ setModalOpen }) {
           dateOfBirth: userInfo.dateOfBirth ? userInfo.dateOfBirth : "",
           contact: userInfo.contact ? userInfo.contact : "",
           summary: userInfo.summary ? userInfo.summary : "",
+          facebookUsername: userInfo.facebookUsername
+            ? userInfo.facebookUsername
+            : "",
+          instagramUsername: userInfo.instagramUsername
+            ? userInfo.instagramUsername
+            : "",
           profilePhoto: userInfo.profilePhoto ? userInfo.profilePhoto : null,
           galleryImage1: userInfo.galleryImage1 ? userInfo.galleryImage1 : null,
           galleryImage2: userInfo.galleryImage2 ? userInfo.galleryImage2 : null,
         }}
         validationSchema={validationSchema}
-        onSubmit={handleFormSubmit}
+        onSubmit={handleEditUser}
       >
         {({ errors, touched, handleSubmit, setFieldValue, values }) => (
           <>
@@ -99,6 +102,30 @@ function EditUserForm({ setModalOpen }) {
                   initalImage={values.galleryImage2}
                   setFormikField={"galleryImage2"}
                 />
+              </div>
+              <div className="social__links__wrapper">
+                <div className="sociallinks">
+                  <FacebookIcon style={{ width: "2rem" }} />
+                  <p>www.facebook.com/</p>
+                  <Field
+                    type="text"
+                    name="facebookUsername"
+                    id="facebookUsername"
+                    className={"sociallinks__input"}
+                    placeholder="username"
+                  />
+                </div>
+                <div className="sociallinks">
+                  <InstagramIcon style={{ width: "2rem" }} />
+                  <p>www.instagram.com/</p>
+                  <Field
+                    type="text"
+                    name="instagramUsername"
+                    id="instagramUsername"
+                    className={"sociallinks__input"}
+                    placeholder="username"
+                  />
+                </div>
               </div>
               <label htmlFor="fullName" className="form-label modal-label">
                 Your FullName *

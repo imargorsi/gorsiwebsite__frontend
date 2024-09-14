@@ -4,7 +4,10 @@ import * as Yup from "yup";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
+import { useNavigate } from "react-router-dom";
+
 function SignUpForm() {
+  const navigate = useNavigate();
   const validationSchema = Yup.object({
     email: Yup.string()
       .email("Invalid email format")
@@ -30,6 +33,9 @@ function SignUpForm() {
 
       if (signup.data.message === "New User Created") {
         toast.success("User Registeration Successfull, please login");
+        setTimeout(() => {
+          navigate("/profile");
+        }, 2000);
       }
     } catch (error) {
       console.log("error during signup", error);

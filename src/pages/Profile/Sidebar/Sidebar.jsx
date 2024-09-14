@@ -34,9 +34,24 @@ function Sidebar({ userDetails }) {
       <div className="socialmedilinks">
         <h3 className="heading__h3 ">Social Media Profiles:</h3>
         <div className="socialmedilinks__icons">
-          <FacebookIcon width={"5rem"} style={{ cursor: "pointer" }} />
-          <InstagramIcon width={"5rem"} style={{ cursor: "pointer" }} />
-          <TwitterIcon width={"5rem"} style={{ cursor: "pointer" }} />
+          <a
+            href={`https://www.facebook.com/${
+              userDetails.facebookUsername ? userDetails.facebookUsername : ""
+            }`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FacebookIcon width={"5rem"} style={{ cursor: "pointer" }} />
+          </a>
+          <a
+            href={`https://www.instagram.com/${
+              userDetails.instagramUsername ? userDetails.instagramUsername : ""
+            }`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InstagramIcon width={"5rem"} style={{ cursor: "pointer" }} />
+          </a>
         </div>
       </div>
     </div>

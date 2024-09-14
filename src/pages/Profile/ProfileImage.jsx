@@ -1,5 +1,5 @@
-function ProfileImage() {
-  return <img className="profileimg" src="/hero.jpg" alt="" />;
+function ProfileImage({ imgsrc }) {
+  return <img className="profileimg" src={imgsrc} alt="" />;
 }
 
 export default ProfileImage;

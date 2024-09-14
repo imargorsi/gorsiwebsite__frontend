@@ -3,10 +3,14 @@ import * as Yup from "yup";
 
 import ImageUpload from "../../../components/ImageUpload/ImageUpload";
 
+import { useUserInfo } from "../../../../context/UserContext";
+
 const countWords = (str) =>
   str ? str.split(/\s+/).filter((word) => word.length > 0).length : 0;
 
 function EditUserForm({ setModalOpen }) {
+  const { userInfo } = useUserInfo();
+
   const validationSchema = Yup.object({
     name: Yup.string().required("Full name is required"),
     city: Yup.string(),
@@ -34,15 +38,15 @@ function EditUserForm({ setModalOpen }) {
     <div>
       <Formik
         initialValues={{
-          name: "",
-          city: "",
-          profession: "",
-          dob: "",
-          phone: "",
-          summary: "",
-          profilephoto: null,
-          galleryimgOne: null,
-          galleryimgTwo: null,
+          name: userInfo.fullName ? userInfo.fullName : "",
+          city: userInfo.city ? userInfo.city : "",
+          profession: userInfo.profession ? userInfo.profession : "",
+          dob: userInfo.dateOfBirth ? userInfo.dateOfBirth : "",
+          phone: userInfo.contact ? userInfo.contact : "",
+          summary: userInfo.summary ? userInfo.summary : "",
+          profilephoto: userInfo.profilePhoto ? userInfo.profilePhoto : null,
+          galleryimgOne: userInfo.galleryImage1 ? userInfo.galleryImage1 : null,
+          galleryimgTwo: userInfo.galleryImage2 ? userInfo.galleryImage2 : null,
         }}
         validationSchema={validationSchema}
         onSubmit={handleFormSubmit}

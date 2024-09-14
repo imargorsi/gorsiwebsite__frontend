@@ -58,7 +58,13 @@ function Profile() {
               <div className="userprofile">
                 <div className="profile__info__wrapper">
                   <div className="profile__info">
-                    <ProfileImage />
+                    <ProfileImage
+                      imgsrc={
+                        userDetails.profilePhoto
+                          ? "userDetails.profilePhoto"
+                          : "/default.jpg"
+                      }
+                    />
 
                     <div className="profile__info__text">
                       <h3 className="heading__h3">{userDetails.fullName}</h3>
@@ -82,8 +88,20 @@ function Profile() {
                 <div className="userprofile__gallery">
                   <h2 className="heading__h2">My Gallery:</h2>
                   <div className="gallery__images">
-                    <ProfileImage />
-                    <ProfileImage />
+                    <ProfileImage
+                      imgsrc={
+                        userDetails.profilePhoto
+                          ? "userDetails.galleryImage1"
+                          : "/default.jpg"
+                      }
+                    />
+                    <ProfileImage
+                      imgsrc={
+                        userDetails.profilePhoto
+                          ? "userDetails.galleryImage2"
+                          : "/default.jpg"
+                      }
+                    />
                     <div className="gorsitrademarklogo"></div>
                   </div>
                 </div>

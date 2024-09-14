@@ -50,3 +50,59 @@
 .modalbody {
   margin-top: 2rem;
 }
+
+.imagecomponent__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* for 2xl   */
+/* @media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+} */
+
+/* for xl   */
+/* @media (max-width: 1280px) {
+   .container {
+    max-width: 1024px;
+  }
+} */
+
+/* for large */
+/* @media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+} */
+
+/* for medium */
+@media (max-width: 768px) {
+  .modalbox {
+    width: 600px;
+  }
+
+  .imagecomponent__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* for small */
+@media (max-width: 640px) {
+  .modalbox {
+    width: 90%;
+    margin-top: 1rem;
+  }
+}
+
+/* for extra small */
+/* @media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+} */

@@ -79,9 +79,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(
-      -10px
-    ); /* Adjust the value to control the floating height */
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0);
@@ -327,5 +325,9 @@
   }
   .form-container {
     padding-inline: 0rem;
+  }
+
+  .transparent__btn {
+    padding: 0.5rem 1.8rem;
   }
 }

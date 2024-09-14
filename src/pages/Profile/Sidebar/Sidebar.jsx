@@ -24,7 +24,7 @@ function Sidebar({ userDetails }) {
           {userDetails.profession ? userDetails.profession : ""}
         </p>
         <p className="paragraph userinfo">
-          Date of Birth:{" "}
+          Date of Birth:
           {userDetails.dateOfBirth ? userDetails.dateOfBirth : ""}
         </p>
         <p className="paragraph userinfo">

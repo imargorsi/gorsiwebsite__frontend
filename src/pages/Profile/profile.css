@@ -23,11 +23,6 @@
   border: 4px solid var(--clr-dark-2);
 }
 
-.profile__info__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
 .profile__info {
   display: flex;
   align-items: center;
@@ -62,7 +57,7 @@
 }
 
 .editButton {
-  width: 130px;
+  width: 200px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -141,10 +136,6 @@
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .editButton {
-    align-self: flex-end;
-  }
 }
 
 /* for extra small */
@@ -156,9 +147,5 @@
 
   .gorsitrademarklogo {
     right: 0rem;
-  }
-
-  .profile__info__wrapper {
-    flex-direction: column;
   }
 }

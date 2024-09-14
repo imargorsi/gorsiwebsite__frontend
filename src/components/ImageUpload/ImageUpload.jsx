@@ -3,7 +3,7 @@ import "./imageupload.css";
 import { useRef, useState, useEffect } from "react";
 import EditIcon from "../../Icons/Edit.icon";
 
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 function ImageUpload({ setFieldValue, initalImage, setFormikField }) {
   const fileInputRef = useRef(null);

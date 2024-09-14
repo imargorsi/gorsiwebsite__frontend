@@ -56,33 +56,31 @@ function Profile() {
           {userDetails ? (
             <div className="profile__wrapper">
               <div className="userprofile">
-                <div className="profile__info__wrapper">
-                  <div className="profile__info">
-                    <ProfileImage
-                      imgsrc={
-                        userDetails.profilePhoto
-                          ? "userDetails.profilePhoto"
-                          : "/default.jpg"
-                      }
-                    />
+                <div className="profile__info">
+                  <ProfileImage
+                    imgsrc={
+                      userDetails.profilePhoto
+                        ? "userDetails.profilePhoto"
+                        : "/default.jpg"
+                    }
+                  />
 
-                    <div className="profile__info__text">
-                      <h3 className="heading__h3">{userDetails.fullName}</h3>
-                      <p className="paragraph">{userDetails.email}</p>
-                      <p className="paragraph profile__info__summary">
-                        {userDetails.summary || "No summary available."}
-                      </p>
-                    </div>
+                  <div className="profile__info__text">
+                    <h3 className="heading__h3">{userDetails.fullName}</h3>
+                    <p className="paragraph">{userDetails.email}</p>
+                    <p className="paragraph profile__info__summary">
+                      {userDetails.summary || "No summary available."}
+                    </p>
+                    {!id && (
+                      <div
+                        className="editButton"
+                        onClick={() => setModalOpen(true)}
+                      >
+                        <EditIcon style={{ width: "2rem" }} />
+                        <p className="editbtntext">Edit Profile</p>
+                      </div>
+                    )}
                   </div>
-                  {!id && (
-                    <div
-                      className="editButton"
-                      onClick={() => setModalOpen(true)}
-                    >
-                      <EditIcon style={{ width: "2rem" }} />
-                      <p className="editbtntext">Edit Profile</p>
-                    </div>
-                  )}
                 </div>
 
                 <div className="userprofile__gallery">

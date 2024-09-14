@@ -5,18 +5,46 @@ import ImageUpload from "../../../components/ImageUpload/ImageUpload";
 
 import { useUserInfo } from "../../../../context/UserContext";
 
+import axios from "axios";
+import toast from "react-hot-toast";
+
 const countWords = (str) =>
   str ? str.split(/\s+/).filter((word) => word.length > 0).length : 0;
 
 function EditUserForm({ setModalOpen }) {
-  const { userInfo } = useUserInfo();
+  const { userInfo, setUserInfo } = useUserInfo();
+
+  const handleEditUser = async (values) => {
+    try {
+      const editUser = await axios.patch(
+        "http://localhost:3000/api/editUser",
+        values,
+        {
+          headers: {
+            Authorization: `Bearer ${useUserInfo.token}`,
+          },
+        }
+      );
+
+      // console.log(editUser.data.data, "edit user response");
+
+      if (editUser.data.message === "User edited successfully") {
+        toast.success("User Edited Successfully");
+        setUserInfo(editUser.data.data);
+        setModalOpen(false);
+      }
+    } catch (error) {
+      console.error("error updateding user", error);
+      toast.error(error.message);
+    }
+  };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Full name is required"),
+    fullName: Yup.string().required("Full name is required"),
     city: Yup.string(),
     profession: Yup.string(),
-    dob: Yup.date().nullable(),
-    phone: Yup.string()
+    dateOfBirth: Yup.date().nullable(),
+    contact: Yup.string()
       .matches(/^[0-9]{11}$/, "Phone number must be exactly 11 digits")
       .nullable(),
     summary: Yup.string().test(
@@ -24,29 +52,30 @@ function EditUserForm({ setModalOpen }) {
       "Summary must be under 50 words",
       (value) => countWords(value) <= 50
     ),
-    profilephoto: Yup.mixed().nullable(),
+    profilePhoto: Yup.mixed().nullable(),
     galleryimgOne: Yup.mixed().nullable(),
     galleryimgTwo: Yup.mixed().nullable(),
   });
 
   const handleFormSubmit = (values) => {
     console.log("Form submitted with values:", values);
-    setModalOpen(false);
+    handleEditUser(values);
   };
 
   return (
     <div>
       <Formik
         initialValues={{
-          name: userInfo.fullName ? userInfo.fullName : "",
+          fullName: userInfo.fullName ? userInfo.fullName : "",
+          userId: userInfo.userId,
           city: userInfo.city ? userInfo.city : "",
           profession: userInfo.profession ? userInfo.profession : "",
-          dob: userInfo.dateOfBirth ? userInfo.dateOfBirth : "",
-          phone: userInfo.contact ? userInfo.contact : "",
+          dateOfBirth: userInfo.dateOfBirth ? userInfo.dateOfBirth : "",
+          contact: userInfo.contact ? userInfo.contact : "",
           summary: userInfo.summary ? userInfo.summary : "",
-          profilephoto: userInfo.profilePhoto ? userInfo.profilePhoto : null,
-          galleryimgOne: userInfo.galleryImage1 ? userInfo.galleryImage1 : null,
-          galleryimgTwo: userInfo.galleryImage2 ? userInfo.galleryImage2 : null,
+          profilePhoto: userInfo.profilePhoto ? userInfo.profilePhoto : null,
+          galleryImage1: userInfo.galleryImage1 ? userInfo.galleryImage1 : null,
+          galleryImage2: userInfo.galleryImage2 ? userInfo.galleryImage2 : null,
         }}
         validationSchema={validationSchema}
         onSubmit={handleFormSubmit}
@@ -57,34 +86,34 @@ function EditUserForm({ setModalOpen }) {
               <div className="imagecomponent__wrapper">
                 <ImageUpload
                   setFieldValue={setFieldValue}
-                  initalImage={values.profilephoto}
-                  setFormikField={"profilephoto"}
+                  initalImage={values.profilePhoto}
+                  setFormikField={"profilePhoto"}
                 />
                 <ImageUpload
                   setFieldValue={setFieldValue}
-                  initalImage={values.galleryimgOne}
-                  setFormikField={"galleryimgOne"}
+                  initalImage={values.galleryImage1}
+                  setFormikField={"galleryImage1"}
                 />
                 <ImageUpload
                   setFieldValue={setFieldValue}
-                  initalImage={values.galleryimgTwo}
-                  setFormikField={"galleryimgTwo"}
+                  initalImage={values.galleryImage2}
+                  setFormikField={"galleryImage2"}
                 />
               </div>
-              <label htmlFor="name" className="form-label modal-label">
+              <label htmlFor="fullName" className="form-label modal-label">
                 Your FullName *
               </label>
               <Field
                 type="text"
-                name="name"
-                id="name"
+                name="fullName"
+                id="fullName"
                 className={`form-input modal-input ${
-                  errors.name && touched.name ? "input-error" : ""
+                  errors.fullName && touched.fullName ? "input-error" : ""
                 }`}
                 placeholder="Enter your FullName"
               />
-              {errors.name && touched.name ? (
-                <p className="error">{errors.name}</p>
+              {errors.fullName && touched.fullName ? (
+                <p className="error">{errors.fullName}</p>
               ) : null}
 
               <label htmlFor="city" className="form-label modal-label">
@@ -119,35 +148,35 @@ function EditUserForm({ setModalOpen }) {
                 <p className="error">{errors.profession}</p>
               ) : null}
 
-              <label htmlFor="dob" className="form-label modal-label">
+              <label htmlFor="dateOfBirth" className="form-label modal-label">
                 Date of Birth (optional)
               </label>
               <Field
                 type="date"
-                name="dob"
-                id="dob"
+                name="dateOfBirth"
+                id="dateOfBirth"
                 className={`form-input modal-input ${
-                  errors.dob && touched.dob ? "input-error" : ""
+                  errors.dateOfBirth && touched.dateOfBirth ? "input-error" : ""
                 }`}
               />
-              {errors.dob && touched.dob ? (
-                <p className="error">{errors.dob}</p>
+              {errors.dateOfBirth && touched.dateOfBirth ? (
+                <p className="error">{errors.dateOfBirth}</p>
               ) : null}
 
-              <label htmlFor="phone" className="form-label modal-label">
+              <label htmlFor="contact" className="form-label modal-label">
                 Contact/Phone Number (optional)
               </label>
               <Field
                 type="text"
-                name="phone"
-                id="phone"
+                name="contact"
+                id="contact"
                 className={`form-input modal-input ${
-                  errors.phone && touched.phone ? "input-error" : ""
+                  errors.contact && touched.contact ? "input-error" : ""
                 }`}
                 placeholder="Enter your Phone Number"
               />
-              {errors.phone && touched.phone ? (
-                <p className="error">{errors.phone}</p>
+              {errors.contact && touched.contact ? (
+                <p className="error">{errors.contact}</p>
               ) : null}
 
               <label htmlFor="summary" className="form-label modal-label">

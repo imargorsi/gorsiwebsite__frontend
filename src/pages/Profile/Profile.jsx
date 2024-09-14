@@ -7,6 +7,8 @@ import ProfileImage from "./ProfileImage";
 import { useUserInfo } from "../../../context/UserContext";
 import "./profile.css";
 
+import EditIcon from "../../Icons/Edit.icon";
+
 function Profile() {
   const { userInfo } = useUserInfo();
   const [userDetails, setUserDetails] = useState(null);
@@ -50,16 +52,26 @@ function Profile() {
           {userDetails ? (
             <div className="profile__wrapper">
               <div className="userprofile">
-                <div className="profile__info">
-                  <ProfileImage />
-                  <div className="profile__info__text">
-                    <h3 className="heading__h3">{userDetails.fullName}</h3>
-                    <p className="paragraph">{userDetails.email}</p>
-                    <p className="paragraph profile__info__summary">
-                      {userDetails.summary || "No summary available."}
-                    </p>
+                <div className="profile__info__wrapper">
+                  <div className="profile__info">
+                    <ProfileImage />
+
+                    <div className="profile__info__text">
+                      <h3 className="heading__h3">{userDetails.fullName}</h3>
+                      <p className="paragraph">{userDetails.email}</p>
+                      <p className="paragraph profile__info__summary">
+                        {userDetails.summary || "No summary available."}
+                      </p>
+                    </div>
                   </div>
+                  {!id && (
+                    <div className="editButton">
+                      <EditIcon style={{ width: "2rem" }} />
+                      <p className="editbtntext">Edit Profile</p>
+                    </div>
+                  )}
                 </div>
+
                 <div className="userprofile__gallery">
                   <h2 className="heading__h2">My Gallery:</h2>
                   <div className="gallery__images">

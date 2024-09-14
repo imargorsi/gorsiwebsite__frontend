@@ -23,9 +23,15 @@
   border: 4px solid var(--clr-dark-2);
 }
 
+.profile__info__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .profile__info {
   display: flex;
   align-items: center;
+
   gap: 2rem;
   position: relative;
 }
@@ -53,6 +59,21 @@
   background-size: cover;
   background-repeat: no-repeat;
   animation: float 3s ease-in-out infinite;
+}
+
+.editButton {
+  width: 130px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.editbtntext {
+  font-size: 1.1rem;
+  margin-top: 0.4rem;
+  color: var(--clr-dark-2);
 }
 
 /* for 2xl   */
@@ -118,8 +139,11 @@
   .profile__info {
     gap: 1rem;
     flex-direction: column;
-
     align-items: flex-start;
+  }
+
+  .editButton {
+    align-self: flex-end;
   }
 }
 
@@ -132,5 +156,9 @@
 
   .gorsitrademarklogo {
     right: 0rem;
+  }
+
+  .profile__info__wrapper {
+    flex-direction: column;
   }
 }

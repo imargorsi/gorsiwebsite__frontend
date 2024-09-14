@@ -34,8 +34,9 @@ function LoginForm() {
 
       if (loginUser.data.message === "Log in Successfully") {
         toast.success("Login Successfull");
-        setUserInfo(loginUser.data.data);
+        setUserInfo(loginUser.data.data.user);
         navigate("/");
+        // console.log(loginUser);
       }
     } catch (error) {
       console.error("error during login", error);

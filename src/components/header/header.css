@@ -50,6 +50,10 @@ Link {
 
 .header__profile {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
 }
 
 .header__profile__img {

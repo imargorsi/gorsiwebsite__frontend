@@ -1,10 +1,10 @@
 import "./modal.css";
 
 import CloseIcon from "../../../Icons/Close.icon";
-
+import EditUserForm from "../form/EditUserForm";
 function Modal({ setModalOpen }) {
   return (
-    <div className="modalwrapper">
+    <div className="modalwrapper no-scroll">
       <div className="modalbox">
         <div className="modalheader">
           <h3 className="heading__h3">Edit Profile</h3>
@@ -14,12 +14,8 @@ function Modal({ setModalOpen }) {
           />
         </div>
         <hr className="modalhr" />
-
-        <div className="modalfooter">
-          <button onClick={() => setModalOpen(false)} className="btn closebtn">
-            Close
-          </button>
-          <button className="btn">Save</button>
+        <div className="modalbody">
+          <EditUserForm setModalOpen={setModalOpen} />
         </div>
       </div>
     </div>

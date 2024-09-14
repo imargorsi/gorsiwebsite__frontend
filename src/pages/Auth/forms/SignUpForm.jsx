@@ -62,14 +62,14 @@ function SignUpForm() {
       >
         {({ errors, touched }) => (
           <Form>
-            <label htmlFor="email" className="form-label">
+            <label htmlFor="email" className="form-label auth_lable">
               Email
             </label>
             <Field
               type="email"
               id="email"
               name="email"
-              className={`form-input ${
+              className={`form-input auth_input ${
                 errors.email && touched.email ? "input-error" : ""
               }`}
               placeholder="Enter your Email"
@@ -78,14 +78,14 @@ function SignUpForm() {
               <p className="error">{errors.email}</p>
             ) : null}
 
-            <label htmlFor="fullName" className="form-label">
+            <label htmlFor="fullName" className="form-label auth_lable">
               Your Full Name
             </label>
             <Field
               type="text"
               name="fullName"
               id="fullName"
-              className={`form-input ${
+              className={`form-input auth_input ${
                 errors.fullName && touched.fullName ? "input-error" : ""
               }`}
               placeholder="Enter your Full Name"
@@ -94,14 +94,14 @@ function SignUpForm() {
               <p className="error">{errors.fullName}</p>
             ) : null}
 
-            <label htmlFor="password" className="form-label">
+            <label htmlFor="password" className="form-label auth_lable">
               Password
             </label>
             <Field
               type="password"
               name="password"
               id="password"
-              className={`form-input ${
+              className={`form-input auth_input ${
                 errors.password && touched.password ? "input-error" : ""
               }`}
               placeholder="Enter your Password"
@@ -110,14 +110,14 @@ function SignUpForm() {
               <p className="error">{errors.password}</p>
             ) : null}
 
-            <label htmlFor="confirmPassword" className="form-label">
+            <label htmlFor="confirmPassword" className="form-label auth_lable">
               Confirm Your Password
             </label>
             <Field
               type="password"
               id="confirmPassword"
               name="confirmPassword"
-              className={`form-input ${
+              className={`form-input auth_input ${
                 errors.confirmPassword && touched.confirmPassword
                   ? "input-error"
                   : ""

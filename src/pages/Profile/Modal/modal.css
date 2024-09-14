@@ -1,12 +1,12 @@
 .modalbox {
   width: 660px;
-  height: 660px;
+  max-height: 660px;
   border: 2px solid var(--clr-dark-2);
   padding: 2rem;
   background-color: var(--clr-white);
   border-radius: 10px;
+  overflow-y: scroll;
 
-  /* Add the following line to include a drop shadow */
   box-shadow: 0px -2px 25px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px -2px 25px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -2px 25px 2px rgba(0, 0, 0, 0.3);
@@ -27,5 +27,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10rem;
+}
+
+.savebtn {
+  color: var(--clr-white);
+  background-color: var(--clr-dark-2);
+}
+
+.modalbody__profile {
+  margin-top: 2rem;
+}
+
+.modal-lable {
+  color: var(--clr-dark-2);
+}
+
+.modal-input {
+  margin-bottom: 2rem;
+  margin-top: 0.3rem;
+}
+
+.modalbody {
+  margin-top: 2rem;
 }

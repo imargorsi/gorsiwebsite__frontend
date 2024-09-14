@@ -6,7 +6,6 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 import { useUserInfo } from "../../../../context/UserContext";
-import { useEffect } from "react";
 
 function LoginForm() {
   const navigate = useNavigate();
@@ -19,10 +18,6 @@ function LoginForm() {
     password: Yup.string()
       .min(6, "Password must be at least 6 characters")
       .required("Password is required"),
-  });
-
-  useEffect(() => {
-    console.log(userInfo, "i am context data");
   });
 
   const handleLogin = async (body) => {
@@ -69,7 +64,7 @@ function LoginForm() {
       >
         {({ errors, touched }) => (
           <Form>
-            <label htmlFor="email" className="form-label">
+            <label htmlFor="email" className="form-label auth_lable">
               Email
             </label>
 
@@ -77,7 +72,7 @@ function LoginForm() {
               type="email"
               id="email"
               name="email"
-              className={`form-input ${
+              className={`form-input auth_input ${
                 errors.email && touched.email ? "input-error" : ""
               }`}
               placeholder="Enter your Email"
@@ -86,7 +81,7 @@ function LoginForm() {
               <p className="error">{errors.email}</p>
             ) : null}
 
-            <label htmlFor="password" className="form-label">
+            <label htmlFor="password" className="form-label auth_lable">
               Password
             </label>
 
@@ -94,7 +89,7 @@ function LoginForm() {
               type="password"
               name="password"
               id="password"
-              className={`form-input ${
+              className={`form-input auth_input ${
                 errors.email && touched.email ? "input-error" : ""
               }`}
               placeholder="Enter your Password"

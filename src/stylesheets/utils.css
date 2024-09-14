@@ -157,10 +157,19 @@
     0 0 100px -10px var(--clr-dark-1);
 }
 
-.closebtn {
-  background-color: transparent;
+.transparent__btn {
   border: 2px solid var(--clr-dark-2);
-  color: var(--clr-dark-2);
+  text-align: center;
+  padding: 0.8rem 3rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.transparent__btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 10px rgb(88, 87, 84), 0 4px 10px rgb(80, 80, 79),
+    0 0 100px -10px var(--clr-dark-1);
 }
 
 .fullbackground {
@@ -170,6 +179,58 @@
 .clipboardicon {
   width: 1.6rem;
   color: blue;
+}
+
+/* form css */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 4rem;
+  width: 100%;
+  margin-top: 4rem;
+  animation: fade-in-bottom 0.5s linear 0s 1 normal none;
+}
+
+.form-label {
+  font-size: 1.2rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-input:focus {
+  border: none;
+  outline: none;
+}
+
+.forgot-password {
+  text-align: right;
+  cursor: pointer;
+  color: var(--clr-white);
+  margin-top: 1rem;
+}
+
+.loginbtn {
+  width: 200px;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+.error {
+  color: #ef5350;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  text-align: right;
+}
+
+.input-error {
+  border: 4px solid #ef5350;
 }
 
 /* for 2xl  */
@@ -201,6 +262,10 @@
 
   .paragraph {
     font-size: 1.1rem;
+  }
+
+  .form-container {
+    padding-inline: 2rem;
   }
 }
 
@@ -259,5 +324,8 @@
 
   .heading__h2 {
     font-size: 1.4rem;
+  }
+  .form-container {
+    padding-inline: 0rem;
   }
 }

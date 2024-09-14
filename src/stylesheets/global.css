@@ -47,13 +47,20 @@ body {
 .modalwrapper {
   background-color: #ffe9c511;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   backdrop-filter: blur(5px);
   position: absolute;
   z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 /* Scrollbar Styling */

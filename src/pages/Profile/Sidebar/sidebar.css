@@ -77,18 +77,19 @@
 /* for xl   */
 @media (max-width: 1280px) {
   .sidebar {
-    width: 100%;
-    padding-inline: 1rem;
-    padding-top: 2rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
+    width: 40%;
+    border-radius: 0px;
   }
 }
 
 /* for large */
 @media (max-width: 1024px) {
-  .container {
-    max-width: 768px;
+  .sidebar {
+    width: 100%;
+    padding-inline: 1rem;
+    padding-top: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
   }
 }
 

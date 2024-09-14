@@ -35,7 +35,9 @@ function LoginForm() {
       if (loginUser.data.message === "Log in Successfully") {
         toast.success("Login Successfull");
         setUserInfo(loginUser.data.data.user);
-        navigate("/");
+        setTimeout(() => {
+          navigate("/profile");
+        }, 1200);
         // console.log(loginUser);
       }
     } catch (error) {

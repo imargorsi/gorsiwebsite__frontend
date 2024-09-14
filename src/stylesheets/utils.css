@@ -157,6 +157,12 @@
     0 0 100px -10px var(--clr-dark-1);
 }
 
+.closebtn {
+  background-color: transparent;
+  border: 2px solid var(--clr-dark-2);
+  color: var(--clr-dark-2);
+}
+
 .fullbackground {
   width: 100%;
 }

@@ -8,6 +8,7 @@ import { useUserInfo } from "../../../context/UserContext";
 import "./profile.css";
 
 import EditIcon from "../../Icons/Edit.icon";
+import Modal from "./Modal/Modal";
 
 function Profile() {
   const { userInfo } = useUserInfo();
@@ -15,6 +16,7 @@ function Profile() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { id } = useParams();
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const getUserDetails = async () => {
@@ -46,6 +48,8 @@ function Profile() {
 
   return (
     <>
+      {modalOpen && <Modal setModalOpen={setModalOpen} />}
+
       <Header />
       <div className="fullbackground profilebackground">
         <div className="container">
@@ -65,7 +69,10 @@ function Profile() {
                     </div>
                   </div>
                   {!id && (
-                    <div className="editButton">
+                    <div
+                      className="editButton"
+                      onClick={() => setModalOpen(true)}
+                    >
                       <EditIcon style={{ width: "2rem" }} />
                       <p className="editbtntext">Edit Profile</p>
                     </div>

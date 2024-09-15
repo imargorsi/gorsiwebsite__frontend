@@ -1,6 +1,11 @@
 import "./singleblogcard.css";
 
-function SingleBlogCard({ small, blogPage }) {
+import FacebookIcon from "../../Icons/Facebook.icon";
+import InstagramIcon from "../../Icons/Instagram.icon";
+import TwitterIcon from "../../Icons/Twitter.icon";
+import WhatsAppIcon from "../../Icons/WhatsApp.icon";
+
+function SingleBlogCard({ small, blogPage, singleBlog }) {
   return (
     <div
       className={blogPage ? `grid_1_singleblog blogpage` : `grid_1_singleblog`}
@@ -21,6 +26,39 @@ function SingleBlogCard({ small, blogPage }) {
           </p>
         )}
         <p className="paragraph">By Ar Gorsi</p>
+        {singleBlog && (
+          <div className="blog__sociallinks">
+            <a
+              href={"https://www.facebook.com/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FacebookIcon style={{ width: "3rem" }} />
+            </a>
+            <a
+              href={"https://www.facebook.com/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon style={{ width: "3rem" }} />
+            </a>
+
+            <a
+              href={"https://www.facebook.com/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon style={{ width: "3rem" }} />
+            </a>
+            <a
+              href={"https://www.facebook.com/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsAppIcon style={{ width: "3rem" }} />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

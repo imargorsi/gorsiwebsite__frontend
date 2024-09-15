@@ -67,7 +67,7 @@ function EditUserForm({ setModalOpen }) {
           userId: userInfo.userId,
           city: userInfo.city ? userInfo.city : "",
           profession: userInfo.profession ? userInfo.profession : "",
-          dateOfBirth: userInfo.dateOfBirth ? userInfo.dateOfBirth : "",
+          dateOfBirth: userInfo.dateOfBirth ? userInfo.dateOfBirth : null,
           contact: userInfo.contact ? userInfo.contact : "",
           summary: userInfo.summary ? userInfo.summary : "",
           facebookUsername: userInfo.facebookUsername

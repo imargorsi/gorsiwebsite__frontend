@@ -12,9 +12,12 @@ function HeaderLink() {
 
   return (
     <div className="header__links">
-      <a href="#">Library</a>
-      <a href="#">Blog</a>
-      <a href="#">History</a>
+      <Link to={"/"}>Library</Link>
+      <Link to={"/blog"}>Blog</Link>
+      <Link to={"/"}>History</Link>
+      {/* <a href="#">Library</a>
+      <a href="/blog">Blog</a>
+      <a href="#">History</a> */}
 
       {userInfo && userInfo.userId ? (
         <div className="header__profile">

@@ -75,3 +75,40 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--clr-dark-1);
 }
+
+/* 404 */
+.notfound_-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  gap: 0.6rem;
+}
+
+.notfound__paragraph {
+  margin-bottom: 2rem;
+}
+
+.backbtn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.backbtn > btn {
+  color: #000;
+}
+
+.trademarkicon {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 2rem;
+  opacity: 0.4;
+  animation: float 3s ease-in-out infinite;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}

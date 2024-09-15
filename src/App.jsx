@@ -6,6 +6,7 @@ import Home from "./pages/home";
 import Auth from "./pages/Auth/Auth";
 import Profile from "./pages/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                 </PrivateRoute>
               }
             />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </UserProvider>
       </BrowserRouter>

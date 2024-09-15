@@ -26,7 +26,15 @@ function App() {
                 </PrivateRoute>
               }
             />
-            <Route path="*" element={<NotFound />} />
+            <Route
+              path="*"
+              element={
+                <NotFound
+                  heading={"404 - Page Not Found"}
+                  text={"The page you are looking for does not exist."}
+                />
+              }
+            />
           </Routes>
         </UserProvider>
       </BrowserRouter>

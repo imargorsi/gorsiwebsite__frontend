@@ -14,21 +14,21 @@ function Sidebar({ userDetails }) {
 
       <div className="sidebar__userinfo">
         <p className="paragraph userinfo">
-          City: {userDetails.city ? userDetails.city : ""}
+          City: {userDetails.city ? ` ${userDetails.city}` : ``}
         </p>
         <p className="paragraph userinfo">
           Membership ID#: {userDetails.userId ? userDetails.userId : null}
         </p>
         <p className="paragraph userinfo">
           Profession:
-          {userDetails.profession ? userDetails.profession : ""}
+          {userDetails.profession ? ` ${userDetails.profession}` : ``}
         </p>
         <p className="paragraph userinfo">
           Date of Birth:
-          {userDetails.dateOfBirth ? userDetails.dateOfBirth : ""}
+          {userDetails.dateOfBirth ? ` ${userDetails.dateOfBirth}` : ``}
         </p>
         <p className="paragraph userinfo">
-          Contact: {userDetails.contact ? userDetails.contact : ""}
+          Contact: {userDetails.contact ? ` ${userDetails.contact}` : ``}
         </p>
       </div>
       <div className="socialmedilinks">

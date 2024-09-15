@@ -9,12 +9,12 @@ import "./profile.css";
 
 import EditIcon from "../../Icons/Edit.icon";
 import Modal from "./Modal/Modal";
+import NotFound from "../NotFound";
 
 function Profile() {
   const { userInfo } = useUserInfo();
   const [userDetails, setUserDetails] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const { id } = useParams();
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -33,7 +33,6 @@ function Profile() {
           setUserDetails(userInfo);
         }
       } catch (error) {
-        setError("Error fetching user details");
         console.log("Error finding user:", error);
       } finally {
         setLoading(false);
@@ -43,8 +42,14 @@ function Profile() {
     getUserDetails();
   }, [id, userInfo]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading)
+    return (
+      <div className="loader__wrapper">
+        <div className="loader"></div>
+      </div>
+    );
+
+  // Default values shown
 
   return (
     <>
@@ -107,7 +112,11 @@ function Profile() {
               <Sidebar userDetails={userDetails} />
             </div>
           ) : (
-            <p>User Not Found</p>
+            <NotFound
+              heading={"404 - User Not Found"}
+              text={"The user you are looking for does not exist."}
+              forUser={true}
+            />
           )}
         </div>
       </div>

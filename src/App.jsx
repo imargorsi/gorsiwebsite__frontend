@@ -7,6 +7,7 @@ import Auth from "./pages/Auth/Auth";
 import Profile from "./pages/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog/Blog";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/auth/login" element={<Auth />} />
             <Route path="/auth/signup" element={<Auth />} />
             <Route path="/member/:id" element={<Profile />} />
+            <Route path="/blog" element={<Blog />} />
             <Route
               path="/profile"
               element={

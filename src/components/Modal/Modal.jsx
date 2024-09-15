@@ -1,7 +1,7 @@
 import "./modal.css";
 
-import CloseIcon from "../../../Icons/Close.icon";
-import EditUserForm from "../form/EditUserForm";
+import CloseIcon from "../../Icons/Close.icon";
+import EditUserForm from "../../pages/Profile/form/EditUserForm";
 function Modal({ setModalOpen }) {
   return (
     <div className="modalwrapper no-scroll">

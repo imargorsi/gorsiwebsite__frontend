@@ -8,7 +8,7 @@ import { useUserInfo } from "../../../context/UserContext";
 import "./profile.css";
 
 import EditIcon from "../../Icons/Edit.icon";
-import Modal from "./Modal/Modal";
+import Modal from "../../components/Modal/Modal";
 import NotFound from "../NotFound";
 
 function Profile() {
@@ -48,8 +48,6 @@ function Profile() {
         <div className="loader"></div>
       </div>
     );
-
-  // Default values shown
 
   return (
     <>

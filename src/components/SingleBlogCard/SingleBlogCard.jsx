@@ -1,6 +1,10 @@
-function SingleBlogCard({ small }) {
+import "./singleblogcard.css";
+
+function SingleBlogCard({ small, blogPage }) {
   return (
-    <div className="grid_1_singleblog">
+    <div
+      className={blogPage ? `grid_1_singleblog blogpage` : `grid_1_singleblog`}
+    >
       <img
         className={
           small ? "grid_1_singleblog__img__sm" : "grid_1_singleblog__img"

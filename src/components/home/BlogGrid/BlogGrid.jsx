@@ -1,6 +1,6 @@
 import "./bloggrid.css";
 
-import SingleBlogCard from "./SingleBlogCard";
+import SingleBlogCard from "../../SingleBlogCard/SingleBlogCard";
 
 function BlogGrid() {
   return (

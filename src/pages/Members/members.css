@@ -1,0 +1,145 @@
+.memebers__wrapper {
+  margin-top: 12rem;
+}
+
+.memebers__content {
+  width: 57%;
+}
+
+.members__paragraph {
+  margin-top: 1rem;
+}
+
+.members__cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.membershipcard {
+  width: 480px;
+  height: 258px;
+  background-color: var(--clr-dark-2);
+  border-radius: 20px;
+  position: relative;
+  margin-top: 1.8rem;
+}
+
+.memberscard__background {
+  width: 135px;
+  height: 130px;
+  opacity: 0.3;
+  position: absolute;
+  right: 1rem;
+  bottom: 1.8rem;
+}
+
+.userimage {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 100%;
+}
+
+.members__id,
+.heading__h3 {
+  color: whitesmoke;
+}
+
+.members__details__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  height: 100%;
+}
+
+.members__detail {
+  align-self: flex-start;
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+/* for 2xl   */
+@media (max-width: 1536px) {
+  .memebers__content {
+    width: 70%;
+  }
+
+  .membershipcard {
+    width: 400px;
+    height: 250px;
+  }
+
+  .members__details__wrapper {
+    gap: 2rem;
+  }
+}
+
+/* for xl   */
+@media (max-width: 1280px) {
+  .memebers__content {
+    width: 90%;
+  }
+
+  .members__cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    row-gap: 0rem;
+  }
+}
+
+/* for large */
+@media (max-width: 1024px) {
+  .memebers__content {
+    width: 100%;
+  }
+
+  .members__details__wrapper {
+    gap: 1rem;
+    justify-content: center;
+    padding-inline: 1rem;
+  }
+}
+
+/* for medium */
+/* @media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+} */
+
+/* for small */
+/* @media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+} */
+
+/* for extra small */
+@media (max-width: 470px) {
+  .membershipcard {
+    width: 100%;
+    height: 208px;
+  }
+
+  .userimage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .members__details__wrapper {
+    gap: 0rem;
+    justify-content: space-between;
+  }
+
+  /* .members__detail {
+    text-align: center;
+  } */
+}

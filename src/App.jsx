@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog/Blog";
 import SingleBlog from "./pages/SingleBlog/SingleBlog";
+import Members from "./pages/Members/Members";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/auth/signup" element={<Auth />} />
             <Route path="/member/:id" element={<Profile />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/member" element={<Members />} />
             <Route path="/singleblog" element={<SingleBlog />} />
             <Route
               path="/profile"

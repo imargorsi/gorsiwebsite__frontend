@@ -6,10 +6,14 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 import { useUserInfo } from "../../../../context/UserContext";
+import { useState } from "react";
+
+import { ShowEyeIcon, HideEyeIcon } from "../../../Icons/EyeIcons";
 
 function LoginForm() {
   const navigate = useNavigate();
-  const { userInfo, setUserInfo } = useUserInfo();
+  const { setUserInfo } = useUserInfo();
+  const [showPassword, setShowPassword] = useState(false);
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -67,7 +71,6 @@ function LoginForm() {
             <label htmlFor="email" className="form-label auth_lable">
               Email
             </label>
-
             <Field
               type="email"
               id="email"
@@ -80,26 +83,38 @@ function LoginForm() {
             {errors.email && touched.email ? (
               <p className="error">{errors.email}</p>
             ) : null}
-
             <label htmlFor="password" className="form-label auth_lable">
               Password
             </label>
+            <div className="password__wrapper">
+              <Field
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id="password"
+                className={`form-input auth_input ${
+                  errors.email && touched.email ? "input-error" : ""
+                }`}
+                placeholder="Enter your Password"
+              />
 
-            <Field
-              type="password"
-              name="password"
-              id="password"
-              className={`form-input auth_input ${
-                errors.email && touched.email ? "input-error" : ""
-              }`}
-              placeholder="Enter your Password"
-            />
+              <div
+                className="password__icon__wrapper"
+                onClick={() => {
+                  setShowPassword((prevState) => !prevState);
+                }}
+              >
+                {showPassword ? (
+                  <HideEyeIcon style={{ width: "1.6rem" }} />
+                ) : (
+                  <ShowEyeIcon style={{ width: "1.6rem" }} />
+                )}
+              </div>
+            </div>
+
             {errors.password && touched.password ? (
               <p className="error">{errors.password}</p>
             ) : null}
-
             <p className="forgot-password paragraph">Forgot Password?</p>
-
             <button type="submit" className="btn loginbtn">
               Login
             </button>

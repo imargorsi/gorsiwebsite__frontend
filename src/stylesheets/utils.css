@@ -207,6 +207,7 @@
   border-radius: 10px;
   border: none;
   font-size: 1rem;
+
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .form-input:focus {
@@ -236,6 +237,17 @@
 
 .input-error {
   border: 4px solid #ef5350;
+}
+
+.password__icon__wrapper {
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.password__wrapper {
+  position: relative;
 }
 
 .loader__wrapper {

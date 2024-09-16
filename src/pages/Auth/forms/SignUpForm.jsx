@@ -5,9 +5,13 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+import { ShowEyeIcon, HideEyeIcon } from "../../../Icons/EyeIcons";
 
 function SignUpForm() {
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
   const validationSchema = Yup.object({
     email: Yup.string()
       .email("Invalid email format")
@@ -103,15 +107,29 @@ function SignUpForm() {
             <label htmlFor="password" className="form-label auth_lable">
               Password
             </label>
-            <Field
-              type="password"
-              name="password"
-              id="password"
-              className={`form-input auth_input ${
-                errors.password && touched.password ? "input-error" : ""
-              }`}
-              placeholder="Enter your Password"
-            />
+            <div className="password__wrapper">
+              <Field
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id="password"
+                className={`form-input auth_input ${
+                  errors.password && touched.password ? "input-error" : ""
+                }`}
+                placeholder="Enter your Password"
+              />
+              <div
+                className="password__icon__wrapper"
+                onClick={() => {
+                  setShowPassword((prevState) => !prevState);
+                }}
+              >
+                {showPassword ? (
+                  <HideEyeIcon style={{ width: "1.6rem" }} />
+                ) : (
+                  <ShowEyeIcon style={{ width: "1.6rem" }} />
+                )}
+              </div>
+            </div>
             {errors.password && touched.password ? (
               <p className="error">{errors.password}</p>
             ) : null}
@@ -119,17 +137,32 @@ function SignUpForm() {
             <label htmlFor="confirmPassword" className="form-label auth_lable">
               Confirm Your Password
             </label>
-            <Field
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              className={`form-input auth_input ${
-                errors.confirmPassword && touched.confirmPassword
-                  ? "input-error"
-                  : ""
-              }`}
-              placeholder="Enter Your Password Again"
-            />
+            <div className="password__wrapper">
+              <Field
+                type={showPassword ? "text" : "password"}
+                id="confirmPassword"
+                name="confirmPassword"
+                className={`form-input auth_input ${
+                  errors.confirmPassword && touched.confirmPassword
+                    ? "input-error"
+                    : ""
+                }`}
+                placeholder="Enter Your Password Again"
+              />
+
+              <div
+                className="password__icon__wrapper"
+                onClick={() => {
+                  setShowPassword((prevState) => !prevState);
+                }}
+              >
+                {showPassword ? (
+                  <HideEyeIcon style={{ width: "1.6rem" }} />
+                ) : (
+                  <ShowEyeIcon style={{ width: "1.6rem" }} />
+                )}
+              </div>
+            </div>
             {errors.confirmPassword && touched.confirmPassword ? (
               <p className="error">{errors.confirmPassword}</p>
             ) : null}

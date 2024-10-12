@@ -1,0 +1,116 @@
+/* for perosonaility component */
+.personality__wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding-inline: 15rem;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.personality__img {
+  width: 400px;
+  height: 450px;
+  object-fit: cover;
+  border: 4px solid var(--clr-dark-2);
+  border-radius: 20px;
+}
+
+.personality__btn {
+  margin-top: 2rem;
+}
+
+.personality__heading {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* for perosonaility component */
+
+.people__wrapper {
+  margin: 10rem 0rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* under dev */
+.underdev__bg {
+  background-color: var(--clr-dark-2);
+  padding: 4rem 0rem;
+  width: 100%;
+}
+
+.underdev__btn {
+  margin-top: 1rem;
+}
+
+.underdev__wrapper > p {
+  color: var(--clr-white);
+  width: 50%;
+}
+
+/* for 2xl   */
+@media (max-width: 1536px) {
+  .underdev__wrapper > p {
+    width: 60%;
+  }
+}
+
+/* for xl   */
+@media (max-width: 1280px) {
+  .personality__wrapper {
+    padding-inline: 2rem;
+  }
+
+  .underdev__wrapper > p {
+    width: 80%;
+  }
+}
+
+/* for large */
+@media (max-width: 1024px) {
+  .personality__img {
+    width: 300px;
+    height: 350px;
+  }
+
+  .personality__wrapper {
+    padding-inline: 0rem;
+  }
+}
+
+/* for medium */
+@media (max-width: 768px) {
+  .personality__img {
+    width: 250px;
+    height: 300px;
+  }
+
+  .people__wrapper {
+    margin: 5rem 0rem;
+  }
+}
+
+/* for small */
+@media (max-width: 640px) {
+  .personality__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .underdev__wrapper > p {
+    width: 100%;
+  }
+}
+
+/* for extra small */
+@media (max-width: 400px) {
+  .personality__img {
+    width: 200px;
+    height: 250px;
+  }
+}

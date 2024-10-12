@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog/Blog";
 import SingleBlog from "./pages/SingleBlog/SingleBlog";
 import Members from "./pages/Members/Members";
+import People from "./pages/People/People";
 
 import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
 
@@ -30,6 +31,7 @@ function App() {
               path="/test"
               element={<Breadcrumb title={"Our Members"} />}
             />
+            <Route path="/people" element={<People />} />
             <Route
               path="/profile"
               element={

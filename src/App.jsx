@@ -11,6 +11,8 @@ import Blog from "./pages/Blog/Blog";
 import SingleBlog from "./pages/SingleBlog/SingleBlog";
 import Members from "./pages/Members/Members";
 
+import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
+
 function App() {
   return (
     <>
@@ -24,6 +26,10 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/member" element={<Members />} />
             <Route path="/singleblog" element={<SingleBlog />} />
+            <Route
+              path="/test"
+              element={<Breadcrumb title={"Our Members"} />}
+            />
             <Route
               path="/profile"
               element={

@@ -12,7 +12,7 @@ function MembershipCard() {
 
         <div className="members__detail">
           <p className="paragraph members__id">Membership ID# 123</p>
-          <h3 className="heading__h3">AR GORSI</h3>
+          <h3 className="heading__h3 members__name">AR GORSI</h3>
         </div>
       </div>
     </div>

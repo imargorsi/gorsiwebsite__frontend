@@ -1,5 +1,5 @@
 .memebers__wrapper {
-  margin-top: 12rem;
+  margin-top: 10rem;
 }
 
 .memebers__content {
@@ -16,6 +16,8 @@
   align-items: center;
   justify-content: space-between;
   row-gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 .membershipcard {
@@ -44,7 +46,7 @@
 }
 
 .members__id,
-.heading__h3 {
+.members__name {
   color: whitesmoke;
 }
 

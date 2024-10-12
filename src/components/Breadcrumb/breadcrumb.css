@@ -1,0 +1,20 @@
+.breadcrumb__background {
+  width: 100%;
+  background-color: #d9d9d9;
+}
+
+.breadcrumb__wrapper {
+  padding: 3rem;
+  text-align: center;
+}
+
+.breadcrumb__subtitle {
+  padding: 0.4rem;
+}
+
+/* for small */
+@media (max-width: 640px) {
+  .breadcrumb__wrapper {
+    padding: 2rem 1rem;
+  }
+}

@@ -14,6 +14,8 @@ import People from "./pages/People/People";
 
 import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
 
+import History from "./pages/History/History";
+
 function App() {
   return (
     <>
@@ -32,6 +34,7 @@ function App() {
               element={<Breadcrumb title={"Our Members"} />}
             />
             <Route path="/people" element={<People />} />
+            <Route path="/history" element={<History />} />
             <Route
               path="/profile"
               element={

@@ -16,6 +16,8 @@ import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
 
 import History from "./pages/History/History";
 
+import Library from "./pages/Library/Library";
+
 function App() {
   return (
     <>
@@ -35,6 +37,7 @@ function App() {
             />
             <Route path="/people" element={<People />} />
             <Route path="/history" element={<History />} />
+            <Route path="/library" element={<Library />} />
             <Route
               path="/profile"
               element={

@@ -1,0 +1,14 @@
+.toggle__library__btn {
+  padding: 0.5rem 3rem;
+  border-radius: 12px;
+  background-color: #d9d9d9;
+  font-size: 1.2rem;
+  color: var(--clr-black);
+  transition: all 0.4s ease-in-out;
+  margin-right: 1rem;
+}
+
+.toggle__library__btn__active {
+  background-color: var(--clr-dark-2);
+  color: var(--clr-white);
+}

@@ -1,0 +1,39 @@
+.underdev__bg {
+  background-color: var(--clr-dark-2);
+  padding: 4rem 0rem;
+  width: 100%;
+}
+
+.underdev__btn {
+  margin-top: 1rem;
+}
+
+.underdev__wrapper > p {
+  color: var(--clr-white);
+  width: 50%;
+}
+
+/* for 2xl   */
+/* @media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+} */
+
+/* for xl   */
+/* @media (max-width: 1280px) {
+   .container {
+    max-width: 1024px;
+  }
+} */
+
+/* for large */
+@media (max-width: 1024px) {
+  .underdev__wrapper > p {
+    width: 100%;
+  }
+
+  .underdev__bg {
+    padding: 4rem 1rem;
+  }
+}

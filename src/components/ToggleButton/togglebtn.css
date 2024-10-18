@@ -12,3 +12,11 @@
   background-color: var(--clr-dark-2);
   color: var(--clr-white);
 }
+
+/* for extra small */
+@media (max-width: 400px) {
+  .toggle__library__btn {
+    margin-right: 0.4rem;
+    padding: 0.5rem 2rem;
+  }
+}

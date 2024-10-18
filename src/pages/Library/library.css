@@ -1,5 +1,6 @@
 .library__wrapper {
   margin-top: 4rem;
+  margin-bottom: 6rem;
 }
 
 .togglebtn__wrapper {
@@ -8,7 +9,7 @@
 }
 
 .gallery__images {
-  width: 260px;
+  width: 220px;
   height: 220px;
   border-radius: 8px;
   object-fit: cover;
@@ -21,4 +22,70 @@
   row-gap: 0.5rem;
   column-gap: 1rem;
   align-items: center;
+}
+
+.gallery__books {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.single__book > h2 {
+  font-size: 1.3rem;
+  color: var(--clr-dark-2);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* for 2xl   */
+/* @media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+} */
+
+/* for xl   */
+/* @media (max-width: 1280px) {
+   .container {
+    max-width: 1024px;
+  }
+} */
+
+/* for large */
+/* @media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+} */
+
+/* for medium */
+/* @media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+} */
+
+/* for small */
+@media (max-width: 640px) {
+  .gallery__images {
+    width: 300px;
+  }
+}
+
+/* for extra small */
+@media (max-width: 400px) {
+  .gallery__images {
+    width: 100%;
+  }
+
+  .single__book {
+    margin-bottom: 2rem;
+  }
+
+  .gallery__books {
+    width: 800px;
+    height: 80px;
+  }
 }

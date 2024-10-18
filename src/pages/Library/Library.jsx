@@ -10,6 +10,8 @@ import ImageGallery from "./components/ImageGallery/ImageGallery";
 
 import BookGallery from "./components/BookGallery/BookGallery";
 
+import CallToAction from "../../components/CalltoAction/CallToAction";
+
 function Library() {
   const [isActive, SetIsActive] = useState("useImages");
 
@@ -41,6 +43,12 @@ function Library() {
           </div>
         </div>
       </div>
+      <CallToAction
+        text={
+          "If you have any documents, books, images, or other resources that can positively contribute to our community, please don't hesitate to use the form below to submit them. All members of our clan can then have access to these valuable resources."
+        }
+        btntext={"Submit Form"}
+      />
     </div>
   );
 }

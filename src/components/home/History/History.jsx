@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./history.css";
 
 function History() {
@@ -23,12 +24,12 @@ function History() {
             stronger, united future for our tribe.
           </p>
           <div className="history__section_1_img">
-            <img src="/hero.jpg" alt="" />
-            <img src="/hero.jpg" alt="" />
+            <img src="/history__image__3.jpg" alt="" />
+            <img src="/history__image__4.jpg" alt="" />
           </div>
         </div>
         <div className="history__section_2">
-          <img src="/hero.jpg" alt="" />
+          <img src="/fortimage.jpg" alt="" />
           <h3 className="heading__h3">A Brief History About Gorsi</h3>
           <p className="history_paragraph paragraph">
             The Gujars belong to the north-western parts of India like Gujarat,
@@ -37,10 +38,12 @@ function History() {
             being either Hindus or Sikhs. Gujarat is said to be named after them
             as they settled there in the 6th century.
           </p>
-          <div className="readmore__section">
-            <button className="btn">Read More</button>
-            <hr className="history__hr" />
-          </div>
+          <Link to={"/history"}>
+            <div className="readmore__section">
+              <button className="btn">Read More</button>
+              <hr className="history__hr" />
+            </div>
+          </Link>
         </div>
       </div>
     </div>

@@ -30,6 +30,7 @@
   border-radius: 2px;
   width: 350px;
   height: 350px;
+  object-fit: cover;
 }
 
 .history__section_2 > img {
@@ -37,6 +38,7 @@
   width: 100%;
   margin-bottom: 1.3rem;
   border: 4px solid var(--clr-dark-2);
+  object-fit: cover;
 }
 
 .readmore__section > button {

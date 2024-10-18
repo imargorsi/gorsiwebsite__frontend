@@ -27,7 +27,7 @@ function SingleBlogCard({
     <div
       className={blogPage ? `grid_1_singleblog blogpage` : `grid_1_singleblog`}
       onClick={() => {
-        navigation(`/blog/${createParams(blogTitle)}`);
+        navigation(`/blog/${createParams(blogTitle.toLowerCase())}`);
       }}
     >
       <img

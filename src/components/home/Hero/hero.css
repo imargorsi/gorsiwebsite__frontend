@@ -58,7 +58,7 @@
 }
 
 .book:hover::after {
-  content: "Books";
+  content: "Library";
 }
 
 .people {

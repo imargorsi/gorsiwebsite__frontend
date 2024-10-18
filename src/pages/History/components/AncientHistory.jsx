@@ -6,7 +6,7 @@ function AncientHistory() {
       </h4>
       <div className="ancient__history__section">
         <img
-          src="https://t4.ftcdn.net/jpg/02/39/25/87/360_F_239258741_1KpdKyWZi465dcnZgc3ssfXZgW1GMUbE.jpg"
+          src="/oldhsitory.jpg"
           alt=""
           className="ancient__history__sectionimg"
         />
@@ -39,10 +39,7 @@ function AncientHistory() {
 
         <div className="ancient__history__lastsection__img">
           <h5 className="text__section__paragraph">Walkthrough Our History</h5>
-          <img
-            src="https://t4.ftcdn.net/jpg/02/39/25/87/360_F_239258741_1KpdKyWZi465dcnZgc3ssfXZgW1GMUbE.jpg"
-            alt=""
-          />
+          <img src="emoire.webp" alt="" />
         </div>
       </div>
     </div>

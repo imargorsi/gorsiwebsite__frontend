@@ -12,8 +12,8 @@ function HeaderLink() {
 
   return (
     <div className="header__links">
-      <Link to={"/"}>Library</Link>
-      <Link to={"/"}>History</Link>
+      <Link to={"/library"}>Library</Link>
+      <Link to={"/history"}>History</Link>
       <Link to={"/blog"}>Blog</Link>
 
       {userInfo && userInfo.userId ? (

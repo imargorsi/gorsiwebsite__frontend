@@ -30,7 +30,7 @@ function App() {
             <Route path="/member/:id" element={<Profile />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/member" element={<Members />} />
-            <Route path="/singleblog" element={<SingleBlog />} />
+            <Route path="/blog/:title" element={<SingleBlog />} />
             <Route
               path="/test"
               element={<Breadcrumb title={"Our Members"} />}

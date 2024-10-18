@@ -1,0 +1,36 @@
+{
+  "blogs": [
+    {
+      "title": "The Future of Artificial Intelligence",
+      "author": "Dr. Sarah Johnson",
+      "image": "https://www.cityprocontracting.com/wp-content/uploads/2020/11/Citypro-Contracting-Masonry-COnstruction.jpg",
+      "desc": "Artificial Intelligence has made significant strides in recent years, transforming various industries and aspects of our daily lives.",
+      "firstParagraph": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "secoundParagraph": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+      "title": "Sustainable Living: Small Changes, Big Impact",
+      "author": "Mark Green",
+      "image": "https://careiche.ca/sites/bongo4u_pages_library/images/organicsmm/2022-09/2022-09-crumbing-exterior-walls-b-1200x800.jpg",
+      "desc": "Artificial Intelligence has made significant strides in recent years, transforming various industries and aspects of our daily lives.",
+      "firstParagraph": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "secoundParagraph": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+      "title": "The Art of Mindfulness Meditation",
+      "author": "Emma Chen",
+      "image": "https://avatars.mds.yandex.net/get-altay/1987173/2a0000016eff6d5dd525e55ad522aa7e2c95/XXL",
+      "desc": "Artificial Intelligence has made significant strides in recent years, transforming various industries and aspects of our daily lives.",
+      "firstParagraph": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "secoundParagraph": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+      "title": "Exploring the Wonders of Deep Sea Ecosystems",
+      "author": "Dr. Michael Torres",
+      "image": "https://www.helifix.nl/uploads/images/products/Crack%20Stitching%20Installation%204.jpg",
+      "desc": "Artificial Intelligence has made significant strides in recent years, transforming various industries and aspects of our daily lives.",
+      "firstParagraph": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "secoundParagraph": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    }
+  ]
+}

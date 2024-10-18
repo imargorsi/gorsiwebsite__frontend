@@ -4,48 +4,38 @@ import Header from "../../components/Header/Header";
 
 import "./singleblog.css";
 
+import blogData from "../../../blogData.json";
+
+import { useParams } from "react-router";
+
 function SingleBlog() {
+  const { title } = useParams();
+
+  const findBlog = () => {
+    const blogTitle = title.split("-").join(" ");
+    return blogData.blogs.find((singleBlog) => blogTitle === singleBlog.title);
+  };
+
+  const singleBlogData = findBlog();
+
   return (
     <div>
       <Header />
       <div className="container">
         <div className="blogsection__wrapper">
           <div className="blogfeaturesection">
-            <SingleBlogCard singleBlog={true} />
+            <SingleBlogCard
+              key={singleBlogData.title}
+              blogTitle={singleBlogData.title}
+              blogAuthor={singleBlogData.author}
+              blogImage={singleBlogData.image}
+              blogDesc={singleBlogData.desc}
+              singleBlog={true}
+            />
           </div>
           <div className="blogcontentsection">
-            <p className="paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              doloremque ipsa iste odio esse! Repellendus cum exercitationem quo
-              dolor aliquid, maiores hic magnam, deleniti sapiente quod quis
-              earum amet quas. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quasi doloremque ipsa iste odio esse!
-              Repellendus cum exercitationem quo dolor aliquid, maiores hic
-              magnam, deleniti sapiente quod quis earum amet quas. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Quasi doloremque ipsa
-              iste odio esse! Repellendus cum exercitationem quo dolor aliquid,
-              maiores hic magnam, deleniti sapiente quod quis earum amet quas.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              doloremque ipsa iste odio esse! Repellendus cum exercitationem quo
-              dolor aliquid, maiores hic magnam, deleniti sapiente quod quis
-              earum amet quas.
-            </p>
-            <p className="paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              doloremque ipsa iste odio esse! Repellendus cum exercitationem quo
-              dolor aliquid, maiores hic magnam, deleniti sapiente quod quis
-              earum amet quas. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quasi doloremque ipsa iste odio esse!
-              Repellendus cum exercitationem quo dolor aliquid, maiores hic
-              magnam, deleniti sapiente quod quis earum amet quas. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Quasi doloremque ipsa
-              iste odio esse! Repellendus cum exercitationem quo dolor aliquid,
-              maiores hic magnam, deleniti sapiente quod quis earum amet quas.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              doloremque ipsa iste odio esse! Repellendus cum exercitationem quo
-              dolor aliquid, maiores hic magnam, deleniti sapiente quod quis
-              earum amet quas.
-            </p>
+            <p className="paragraph">{singleBlogData.firstParagraph}</p>
+            <p className="paragraph">{singleBlogData.secoundParagraph}</p>
           </div>
         </div>
       </div>

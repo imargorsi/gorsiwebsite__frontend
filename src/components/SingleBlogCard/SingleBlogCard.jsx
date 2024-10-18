@@ -5,27 +5,44 @@ import InstagramIcon from "../../Icons/Instagram.icon";
 import TwitterIcon from "../../Icons/Twitter.icon";
 import WhatsAppIcon from "../../Icons/WhatsApp.icon";
 
-function SingleBlogCard({ small, blogPage, singleBlog }) {
+import { useNavigate } from "react-router";
+
+function SingleBlogCard({
+  small,
+  blogPage,
+  singleBlog,
+  blogTitle,
+  blogAuthor,
+  blogImage,
+  blogDesc,
+}) {
+  const navigation = useNavigate();
+
+  const createParams = (title) => {
+    const blogParams = title.split(" ").join("-");
+    return blogParams;
+  };
+
   return (
     <div
       className={blogPage ? `grid_1_singleblog blogpage` : `grid_1_singleblog`}
+      onClick={() => {
+        navigation(`/blog/${createParams(blogTitle)}`);
+      }}
     >
       <img
         className={
           small ? "grid_1_singleblog__img__sm" : "grid_1_singleblog__img"
         }
-        src="/hero.jpg"
+        src={blogImage}
         alt=""
       />
       <div className="grid_1_singleblog__text__content">
-        <h3 className="heading__h4">How to Read Books in 2023? And More</h3>
+        <h3 className="heading__h4">{blogTitle}</h3>
         {!small && (
-          <p className="paragraph singleblog__paragraph">
-            The worlds largest book is a Kuan Yin Buddhist scripture. Created in
-            China during the Ming Dynasty, it is about
-          </p>
+          <p className="paragraph singleblog__paragraph">{blogDesc}</p>
         )}
-        <p className="paragraph">By Ar Gorsi</p>
+        <p className="paragraph">By {blogAuthor}</p>
         {singleBlog && (
           <div className="blog__sociallinks">
             <a

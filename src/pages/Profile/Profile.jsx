@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
-import Header from "../../components/Header/Header";
+
 import Sidebar from "./Sidebar/Sidebar";
 import ProfileImage from "./ProfileImage";
 import { useUserInfo } from "../../../context/UserContext";
@@ -53,7 +53,6 @@ function Profile() {
     <>
       {modalOpen && <Modal setModalOpen={setModalOpen} />}
 
-      <Header />
       <div className="fullbackground profilebackground">
         <div className="container">
           {userDetails ? (

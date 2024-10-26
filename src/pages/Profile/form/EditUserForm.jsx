@@ -28,8 +28,6 @@ function EditUserForm({ setModalOpen }) {
         }
       );
 
-      // console.log(editUser.data.data, "edit user response");
-
       if (editUser.data.message === "User edited successfully") {
         toast.success("User Edited Successfully");
         setUserInfo(editUser.data.data);
